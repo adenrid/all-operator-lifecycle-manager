@@ -235,24 +235,25 @@ func (c *ConfigMapUnpacker) job(cmRef *corev1.ObjectReference, bundlePath string
 					Tolerations: []corev1.Toleration{
 						{
 							Key:      "kubernetes.io/arch",
-							Value:    "adeniyi",
+							Value:    "west",
 							Operator: "Equal",
+							Effect: "NoSchedule",
 						},
-						{
-							Key:      "kubernetes.io/arch",
-							Value:    "adeniyi",
-							Operator: "Equal",
-						},
-						{
-							Key:      "kubernetes.io/arch",
-							Value:    "adeniyi",
-							Operator: "Equal",
-						},
-						{
-							Key:      "kubernetes.io/arch",
-							Value:    "adeniyi",
-							Operator: "Equal",
-						},
+						// {
+						// 	Key:      "kubernetes.io/arch",
+						// 	Value:    "west",
+						// 	Operator: "Equal",
+						// },
+						// {
+						// 	Key:      "kubernetes.io/arch",
+						// 	Value:    "west",
+						// 	Operator: "Equal",
+						// },
+						// {
+						// 	Key:      "kubernetes.io/arch",
+						// 	Value:    "west",
+						// 	Operator: "Equal",
+						// },
 					},
 				},
 			},
