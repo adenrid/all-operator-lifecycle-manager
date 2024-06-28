@@ -234,7 +234,7 @@ func (c *ConfigMapUnpacker) job(cmRef *corev1.ObjectReference, bundlePath string
 					},
 					Tolerations: []corev1.Toleration{
 						{
-							Key:      "kubernetes.io/arch",
+							Key:      "zone",
 							Value:    "west",
 							Operator: "Equal",
 							Effect: "NoSchedule",
