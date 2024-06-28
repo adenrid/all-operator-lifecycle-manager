@@ -235,22 +235,22 @@ func (c *ConfigMapUnpacker) job(cmRef *corev1.ObjectReference, bundlePath string
 					Tolerations: []corev1.Toleration{
 						{
 							Key:      "kubernetes.io/arch",
-							Value:    "amd64",
+							Value:    "adeniyi",
 							Operator: "Equal",
 						},
 						{
 							Key:      "kubernetes.io/arch",
-							Value:    "arm64",
+							Value:    "adeniyi",
 							Operator: "Equal",
 						},
 						{
 							Key:      "kubernetes.io/arch",
-							Value:    "ppc64le",
+							Value:    "adeniyi",
 							Operator: "Equal",
 						},
 						{
 							Key:      "kubernetes.io/arch",
-							Value:    "s390x",
+							Value:    "adeniyi",
 							Operator: "Equal",
 						},
 					},
