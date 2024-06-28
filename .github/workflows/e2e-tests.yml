@@ -4,11 +4,22 @@ on:
     - cron: '30 5,17 * * *' # run this every day at 5:30 and 17:30 UTC (00:30 and 12:30 ET)
   push:
     branches:
-      - master
+      - branch-v0.28.0
   pull_request:
   workflow_dispatch:
   merge_group:
 jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v4
+    - name: Build the container image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: Dockerfile
+        push: false
   e2e:
     strategy:
       fail-fast: false
